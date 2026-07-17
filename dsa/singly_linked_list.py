@@ -49,7 +49,17 @@ class Singly_Linked_List():
             self.head=Node(value,temp_right_side)
             self.length+=1
 
-sll1=Singly_Linked_List(2)
+    def pop_left(self):
+        if self.length==0:
+            return
+        if self.length==1:
+            self.head=self.tail=None
+            self.length=0
+        else:
+            self.head=self.head.next_elm
+            self.length-=1
+
+sll1=Singly_Linked_List(3)
 
 sll1.append(5)
 
@@ -71,6 +81,12 @@ print("****")
 
 sll1.append_left(-200)
 
+sll1.printAll()
+print("****")
+print("length=",sll1.length)
+print("****")
+
+sll1.pop_left()
 sll1.printAll()
 print("****")
 print("length=",sll1.length)
