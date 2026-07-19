@@ -5,7 +5,6 @@ class Node():
 
 class Singly_Linked_List():
     def __init__(self,value=None):
-        self.exists=Node(None,None)
         if value is None:
             self.head=self.tail=None
             self.length=0
@@ -87,6 +86,7 @@ print("length=",sll1.length)
 print("****")
 
 sll1.pop_left()
+
 sll1.printAll()
 print("****")
 print("length=",sll1.length)
