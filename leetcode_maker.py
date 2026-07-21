@@ -15,30 +15,12 @@ TESTCASE_DIR.mkdir(parents=True, exist_ok=True)
 
 def create_solution_file(path: Path):
     path.write_text(
-'''
-# Copy from Leetcode terminal
+'''# Copy from Leetcode terminal
 ''',
         encoding="utf-8"
     )
 
     os.chmod(path, 0o777)
-
-
-def create_testcase_file(path: Path):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(
-            [
-                [
-                    [],
-                    None
-                ]
-            ],
-            f,
-            indent=4
-        )
-
-    os.chmod(path, 0o777)
-
 
 def main():
     print("=" * 60)
@@ -56,12 +38,6 @@ def main():
     else:
         create_solution_file(solution_path)
         print(f"✅ Created {solution_path.name}")
-
-    if testcase_path.exists():
-        print(f"❌ {testcase_path.name} already exists.")
-    else:
-        create_testcase_file(testcase_path)
-        print(f"✅ Created {testcase_path.name}")
 
     print("\nDone.")
 

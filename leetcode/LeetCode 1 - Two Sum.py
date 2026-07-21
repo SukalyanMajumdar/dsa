@@ -1,4 +1,3 @@
-# Copy from Leetcode terminal
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         unique_map={}

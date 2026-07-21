@@ -1,4 +1,3 @@
-# Copy from Leetcode terminal
 class Solution:
     def isValid(self, s: str) -> bool:
         brackets_map={"(":")", "{":"}", "[":"]"}
@@ -12,3 +11,8 @@ class Solution:
             return True
         else:
             return False
+
+'''
+Notes:
+standard stack question really. keep checking if left and right align. if align then pop, otherwise keep appending.
+'''
