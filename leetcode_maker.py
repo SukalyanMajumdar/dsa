@@ -31,7 +31,6 @@ def main():
     name = input("Problem Name            : ").strip()
 
     solution_path = LEETCODE_DIR / f"LeetCode {number} - {name}.py"
-    testcase_path = TESTCASE_DIR / f"LeetCode {number} - {name}.json"
 
     if solution_path.exists():
         print(f"\n❌ {solution_path.name} already exists.")
