@@ -15,10 +15,8 @@ TESTCASE_DIR.mkdir(parents=True, exist_ok=True)
 
 def create_solution_file(path: Path):
     path.write_text(
-'''class Solution:
-
-    def solution(self):
-        pass
+'''
+# Copy from Leetcode terminal
 ''',
         encoding="utf-8"
     )
