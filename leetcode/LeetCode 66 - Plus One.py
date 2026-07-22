@@ -10,3 +10,10 @@ class Solution:
             return [1]+digits
         else:
             return digits
+'''
+Notes:
+iterating from the other side of the list.
+if the digit is 9, we make it 0
+otherwise we add 1 to it and break the list.
+if the 0th digit is 0, we append [1] with the list and return the list
+'''        
